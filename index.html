@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Basics in JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Objects in JavaScript</h1>
+    <p>Objects are a way to store key value pairs in JavaScript. The key is represented by a name. Whereas the value is typically represented as a number or a string.</p>
+    <p>In essence, Objects help us store highly related data together.</p>
+    <p>Moreover, we store store functions within objects. More on that later.</p>
+    <h2>Object Literals</h2>
+    <p>Object literals are the foundation are object syntax. Here is an example of a object with a body.</p>
+    <div>
+        <pre class="code">const car = {
+
+        };
+        </pre>
+    </div>
+    <p>Now let's add our key value pairs.</p>
+    <div>
+        <pre class="code">const car = {
+type: "passenger vehicle"
+};
+        </pre>
+    </div>
+    <p>In the example above, our key is <strong>type</strong> and our value is <strong>"passenger vechicle".</strong></p>
+    <p>Now let's add some more comprehensive data.</p>
+    <div>
+        <pre class="code">const car = {
+type: "passenger vehicle",
+wheels: 4,
+engine: true,
+max_passengers: 8
+};
+        </pre>
+    </div>
+    <p>Notice how between each subsequent key value pair, we comma is required with the exception of the final key value pair.</p>
+    <h2>Functions in Objects</h2>
+    <p>We can add functions inside of our objects. Here is an example.</p>
+    <div>
+        <pre class="code">const car = {
+type: "passenger vehicle",
+wheels: 4,
+engine: true,
+max_passengers: 8,
+sell: function() {
+    return("I am sold.");
+    },
+};
+        </pre>
+    </div>
+    <p>We call this type of function and anonymous function because it is not bound to an identifier and thus cannot call itself in isolation.</p>
+    <script src="script.js"></script>
+</body>
+</html>
