@@ -52,6 +52,44 @@ sell: function() {
         </pre>
     </div>
     <p>We call this type of function and anonymous function because it is not bound to an identifier and thus cannot call itself in isolation.</p>
+    <h2>Using Function to Return Objects</h2>
+    <p>When beginning with functions, it's common to use functions to return primitive data types such as strings, numbers, and booleans.</p>
+    <p>In addition, we can use functions to return objects. Here is an example:</p>
+    
+    <div>
+        <pre class="code">function Car(make, model, year, vin) {
+this.make = make;
+this.model = model;
+this.year = year;
+this.vin = vin;
+};
+        </pre>
+        <p>Now that we have created the created our function, we can call the function and pass in our parameters inside the function.</p>
+        <p>In this example, our parameters are: make, model, year, and vin</p>
+        <p>Here's how that will work:</p>
+        <pre class="code">const hondaCivic001 = new Car("Honda", "Civic", 1972, "2HGEH2342NH5001972");
+const hondaCivic002 = new Car("Honda", "Civic", 1973, "2HGEH2342NH5001973");
+const hondaCivic003 = new Car("Honda", "Civic", 1974, "2HGEH2342NH5001974")
+        </pre>
+    <p>If we would like to display our newly created object to the DOM (Document Object Model), we can create another function to do so.</p>
+    <pre class="code">function displayCar(car) {
+output.innerText += `Make: ${car.make}, Model: ${car.model}, Year: ${car.year}, VIN: ${car.vin}\n`;
+};
+    </pre>
+    <p>Now lets call our new function and pass in our varibale we initalized earlier.</p>
+    <pre class="code">const hondaCivic001 = new Car("Honda", "Civic", 1972, "2HGEH2342NH5001972");
+const hondaCivic002 = new Car("Honda", "Civic", 1973, "2HGEH2342NH5001973");
+const hondaCivic003 = new Car("Honda", "Civic", 1974, "2HGEH2342NH5001974");
+    </pre>
+    <p>The output would look like this:</p>
+    <pre class="code">Make: Honda, Model: Civic, Year: 1972, VIN: 2HGEH2342NH5001972
+Make: Honda, Model: Civic, Year: 1973, VIN: 2HGEH2342NH5001973
+Make: Honda, Model: Civic, Year: 1974, VIN: 2HGEH2342NH5001974
+    </pre>
+    </div>
+    <hr>
+    <h2>Personal Testing</h2>
+    <div id="output"></div>
     <script src="script.js"></script>
 </body>
 </html>

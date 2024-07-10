@@ -30,3 +30,7 @@ p {
 pre {
     font-size: 14px;
 }
+
+hr {
+    width: 100%;
+}
